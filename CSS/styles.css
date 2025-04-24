@@ -1512,4 +1512,12 @@ div.Footer-Section div.Footer-Wrapper div.Get-In-Touch ul li a {
 /* ---------------------------------------------------------------- */
 /* Double extra Large Screens */
 @media screen and (min-width: 1400px) {
+  /* Container */
+  .Container {
+    max-width: 1320px;
+  }
+  /* Gallery Section */
+  div.Gallery-Section div.Gallery-Section-Content {
+    height: 1200px;
+  }
 }
