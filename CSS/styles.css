@@ -445,7 +445,9 @@ div.Home-Section
   div.Home-Section-Btns {
   /* background-color: chocolate; */
   display: flex;
-  column-gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
   align-items: center;
 }
 div.Home-Section
@@ -1389,6 +1391,12 @@ div.Footer-Section div.Footer-Wrapper div.Get-In-Touch ul li a {
   div.Home-Section div.Home-Section-Wrapper div.Home-Section-Content {
     width: 41%;
     display: block;
+  }
+  div.Home-Section
+    div.Home-Section-Wrapper
+    div.Home-Section-Content
+    div.Home-Section-Btns {
+    justify-content: flex-start;
   }
   div.Home-Section
     div.Home-Section-Wrapper
