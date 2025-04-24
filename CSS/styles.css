@@ -1,0 +1,1507 @@
+/***************************************General Styles***************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root:has(#Night-Light-Mode-Btn:not(:checked)) {
+  --Main-Color: rgb(206, 18, 18);
+  --Nav-Bar-Background-Color: white;
+  --Nav-Bar-Nav-Links-Hover-Color: black;
+  --Nav-Bar-Night-Light-Mode-Trible-Bar-Icons-Color: black;
+  --Home-Section-YT-anchor-icon-color: rgb(23, 23, 23);
+  --Home-Section-YT-icon-Background-color: white;
+  --Chefs-Section-Card-Caption-Background-Color: white;
+  --Chefs-Section-Card-Caption-Heading-Color: RGB(33, 37, 41);
+  --Contact-Section-Contact-Info-List-Background-Color: rgb(245, 245, 245);
+  --Contact-Section-Contact-Info-List-data-Color: RGB(33, 37, 41);
+  --Contact-Section-Contact-Info-List-Icon-Color: white;
+  --Contact-Section-Contact-Form-Background-Color: white;
+  --Btn-Anchor-Val-Color: white;
+  --Btn-Background-Hover-Color: rgb(230, 20, 20);
+  --Section-Background-Color-1: rgb(238, 238, 238);
+  --Section-Background-Color-2: white;
+  --Logo-Color: RGB(33, 37, 41);
+  --Heading-1-Color: rgb(55, 55, 63);
+  --Section-Header-Paragraph-Color: RGB(33, 37, 41);
+  --Paragraph-Color: RGB(127, 127, 144);
+  --Span-Color: RGB(127, 127, 144);
+}
+
+:root:has(#Night-Light-Mode-Btn:checked) {
+  --Main-Color: rgb(193, 126, 31);
+  --Nav-Bar-Background-Color: rgb(23, 23, 23);
+  --Nav-Bar-Nav-Links-Hover-Color: RGB(252, 252, 252);
+  --Nav-Bar-Night-Light-Mode-Trible-Bar-Icons-Color: white;
+  --Home-Section-YT-anchor-icon-color: white;
+  --Home-Section-YT-icon-Background-color: rgb(23, 23, 23);
+  --Chefs-Section-Card-Caption-Background-Color: rgb(23, 23, 23);
+  --Chefs-Section-Card-Caption-Heading-Color: white;
+  --Contact-Section-Contact-Info-List-Background-Color: rgb(13, 13, 13);
+  --Contact-Section-Contact-Info-List-data-Color: white;
+  --Contact-Section-Contact-Info-List-Icon-Color: black;
+  --Contact-Section-Contact-Form-Background-Color: rgb(23, 23, 23);
+  --Btn-Anchor-Val-Color: black;
+  --Btn-Background-Hover-Color: rgb(212, 138, 35);
+  --Section-Background-Color-1: rgb(37, 37, 37);
+  --Section-Background-Color-2: rgb(32, 32, 32);
+  --Logo-Color: white;
+  --Heading-1-Color: white;
+  --Section-Header-Paragraph-Color: white;
+  --Paragraph-Color: RGB(159, 159, 159);
+  --Span-Color: RGB(159, 159, 159);
+}
+
+:root:has(#Night-Light-Mode-Btn:checked)
+  div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card
+  div.Inner
+  div.Card-Img::before {
+  background-image: url(../images/team-shape-dark.svg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+}
+
+body::selection {
+  background-color: rgb(216, 84, 84);
+  color: white;
+}
+
+body:has(:not(:target))
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links
+  ul
+  li
+  a[href="#Home"] {
+  color: var(--Nav-Bar-Nav-Links-Hover-Color);
+}
+body:has(:not(:target))
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links
+  ul
+  li
+  a[href="#Home"]::after {
+  right: 15px;
+}
+
+body:has(:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links
+  ul
+  li
+  a[href="#Home"] {
+  color: RGB(127, 127, 144);
+}
+
+body:has(:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links
+  ul
+  li
+  a[href="#Home"]::after {
+  right: 100%;
+}
+
+body:has(#Home:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links
+  ul
+  li
+  a[href="#Home"],
+body:has(#Chefs:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links
+  ul
+  li
+  a[href="#Chefs"],
+body:has(#Gallery:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links
+  ul
+  li
+  a[href="#Gallery"],
+body:has(#Contact:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links
+  ul
+  li
+  a[href="#Contact"] {
+  color: var(--Nav-Bar-Nav-Links-Hover-Color);
+}
+
+body:has(#Home:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links
+  ul
+  li
+  a[href="#Home"]::after,
+body:has(#Chefs:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links
+  ul
+  li
+  a[href="#Chefs"]::after,
+body:has(#Gallery:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links
+  ul
+  li
+  a[href="#Gallery"]::after,
+body:has(#Contact:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links
+  ul
+  li
+  a[href="#Contact"]::after {
+  right: 15px;
+}
+
+body:has(#Nav-Links:target) div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links {
+  transform: translateX(0%);
+}
+
+body:has(#Nav-Links:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links
+  ul
+  li
+  a:hover::after {
+  right: 100%;
+}
+
+body:has(#Nav-Links:target):has(#Home:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links,
+body:has(#Nav-Links:target):has(#Chefs:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links,
+body:has(#Nav-Links:target):has(#Gallery:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links,
+body:has(#Nav-Links:target):has(#Contact:target)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Links {
+  transform: translateX(100%);
+}
+
+body:has(#Night-Light-Mode-Btn:not(:checked))
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Right-Wrapper
+  div.Nav-Bar-Night-Light-Mode-Btn
+  label
+  i:last-child {
+  display: none;
+}
+
+body:has(#Night-Light-Mode-Btn:checked)
+  div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Right-Wrapper
+  div.Nav-Bar-Night-Light-Mode-Btn
+  label
+  i:first-child {
+  display: none;
+}
+
+h1 {
+  font-family: "Amatic SC";
+  font-size: 65px;
+  font-weight: 600;
+  margin-block: 0px;
+}
+
+h2 {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: RGB(127, 127, 144);
+  margin-block: 0px;
+}
+
+h3 {
+  font-family: "Inter";
+  margin-block: 0px;
+}
+
+p {
+  margin-block: 0px;
+  font-family: "Open Sans";
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Open Sans";
+}
+
+input,
+textarea,
+button {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.Container {
+  /* background-color: tan; */
+  max-width: 540px;
+  margin-inline: auto;
+  padding: 40px 5px;
+}
+
+.Nav-Bar .Container {
+  padding-block: 25px;
+}
+
+.Chefs-Section .Container,
+.Gallery-Section .Container,
+.Contact-Section .Container {
+  margin-block: 50px;
+}
+
+.Text-Align-Center {
+  text-align: center;
+}
+
+.Clear-Fix {
+  clear: both;
+}
+
+/***************************************Navigation Bar Style***************************************/
+div.Nav-Bar {
+  background-color: var(--Nav-Bar-Background-Color);
+  box-shadow: 0px 0px 14px 0px #0000001b;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+div.Nav-Bar div.Nav-Bar-Wrapper {
+  /* background-color: tan; */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Logo a {
+  /* background-color: brown; */
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--Logo-Color);
+}
+div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Logo::after {
+  content: ".";
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--Main-Color);
+}
+div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links {
+  width: 350px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--Nav-Bar-Background-Color);
+  transform: translateX(100%);
+  transition: 0.5s transform;
+  border-left: 2px solid rgb(241, 241, 241);
+}
+div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links ul li:first-child {
+  align-self: flex-end;
+}
+div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links ul li:first-child a {
+  padding: 10px 15px 5px;
+}
+div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links ul li:first-child a i {
+  font-size: 22px;
+  font-size: 900;
+}
+div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links ul li a {
+  width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  color: RGB(127, 127, 144);
+  display: inline-block;
+  padding: 15px 10px;
+  transition: 0.75s color;
+  position: relative;
+}
+div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links ul li a:hover {
+  color: var(--Nav-Bar-Nav-Links-Hover-Color) !important;
+}
+div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links ul li a::after {
+  content: "";
+  background-color: var(--Main-Color);
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  right: 100%;
+  height: 2px;
+  transition: 0.75s right;
+}
+div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links ul li a:hover::after {
+  right: 15px !important;
+}
+div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Right-Wrapper {
+  /* background-color: blueviolet; */
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Right-Wrapper
+  div.Nav-Bar-Night-Light-Mode-Btn
+  label
+  i {
+  color: var(--Nav-Bar-Night-Light-Mode-Trible-Bar-Icons-Color);
+  font-size: 25px;
+  font-weight: 900;
+}
+
+div.Nav-Bar
+  div.Nav-Bar-Wrapper
+  div.Nav-Bar-Right-Wrapper
+  div.Nav-Bar-Links-Triple-Bar-Icon
+  a
+  i {
+  font-size: 25px;
+  font-weight: 900;
+  color: var(--Nav-Bar-Night-Light-Mode-Trible-Bar-Icons-Color);
+}
+/***************************************Home Section Style***************************************/
+div.Home-Section {
+  background-color: var(--Section-Background-Color-1);
+}
+div.Home-Section div.Home-Section-Wrapper {
+  /* background-color: blueviolet; */
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  gap: 50px;
+}
+div.Home-Section div.Home-Section-Wrapper div.Home-Section-Content {
+  /* background-color: blue; */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+div.Home-Section div.Home-Section-Wrapper div.Home-Section-Content h1 {
+  color: var(--Heading-1-Color);
+}
+div.Home-Section div.Home-Section-Wrapper div.Home-Section-Content p {
+  color: var(--Paragraph-Color);
+  font-size: 16px;
+  font-weight: 400;
+  margin-block: 20px;
+  line-height: 1.6;
+}
+div.Home-Section
+  div.Home-Section-Wrapper
+  div.Home-Section-Content
+  div.Home-Section-Btns {
+  /* background-color: chocolate; */
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+}
+div.Home-Section
+  div.Home-Section-Wrapper
+  div.Home-Section-Content
+  div.Home-Section-Btns
+  a:first-child {
+  color: var(--Btn-Anchor-Val-Color);
+  background-color: var(--Main-Color);
+  border: solid 2px var(--Main-Color);
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: 0.5s background-color, 0.5s border-color;
+}
+div.Home-Section
+  div.Home-Section-Wrapper
+  div.Home-Section-Content
+  div.Home-Section-Btns
+  a:first-child:hover {
+  background-color: var(--Btn-Background-Hover-Color);
+  border-color: var(--Btn-Background-Hover-Color);
+}
+div.Home-Section
+  div.Home-Section-Wrapper
+  div.Home-Section-Content
+  div.Home-Section-Btns
+  div.YT-Btns {
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+}
+div.Home-Section
+  div.Home-Section-Wrapper
+  div.Home-Section-Content
+  div.Home-Section-Btns
+  div.YT-Btns
+  div.Play-Btn {
+  display: flex;
+  background-image: linear-gradient(
+    to right,
+    var(--Main-Color) 0% 50%,
+    transparent 50% 100%
+  );
+  width: 55px;
+  height: 55px;
+  padding: 0;
+  border: 0;
+  color: rgb(33, 37, 41);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+div.Home-Section
+  div.Home-Section-Wrapper
+  div.Home-Section-Content
+  div.Home-Section-Btns
+  div.YT-Btns
+  div.Play-Btn::before {
+  content: "";
+  background-color: var(--Home-Section-YT-icon-Background-color);
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 7.5px;
+  bottom: 0;
+  left: 7.5px;
+  right: 0;
+  border-radius: 50%;
+  z-index: 10;
+}
+div.Home-Section
+  div.Home-Section-Wrapper
+  div.Home-Section-Content
+  div.Home-Section-Btns
+  div.YT-Btns
+  div.Play-Btn
+  a {
+  background-color: transparent;
+  color: var(--Home-Section-YT-anchor-icon-color);
+  padding: 0;
+  border: 0;
+  z-index: 20;
+  transition: 0.5s color;
+}
+div.Home-Section
+  div.Home-Section-Wrapper
+  div.Home-Section-Content
+  div.Home-Section-Btns
+  div.YT-Btns
+  a {
+  display: block;
+  color: var(--Home-Section-YT-anchor-icon-color);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0px;
+  transition: 0.5s color;
+}
+div.Home-Section
+  div.Home-Section-Wrapper
+  div.Home-Section-Content
+  div.Home-Section-Btns
+  div.YT-Btns:hover
+  a,
+div.Home-Section
+  div.Home-Section-Wrapper
+  div.Home-Section-Content
+  div.Home-Section-Btns
+  div.YT-Btns:hover
+  div.Play-Btn
+  a {
+  color: var(--Btn-Background-Hover-Color);
+}
+div.Home-Section div.Home-Section-Wrapper div.Home-Section-Img {
+  /* background-color: red; */
+  width: 100%;
+  display: block;
+}
+div.Home-Section div.Home-Section-Wrapper div.Home-Section-Img img {
+  width: 100%;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.5));
+}
+div.Home-Section div.Home-Section-Wrapper div.Home-Section-Img img:hover {
+  animation-name: Img-Shake-Animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-delay: 0;
+}
+@keyframes Img-Shake-Animation {
+  0% {
+    transform: translate(-2px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(2px, -1px) rotate(-1deg);
+  }
+  30% {
+    transform: translate(-3px, 3px) rotate(1deg);
+  }
+  40% {
+    transform: translate(3px, -3px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-2px, 1px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(2px, -1px) rotate(1deg);
+  }
+  70% {
+    transform: translate(-3px, 3px) rotate(0deg);
+  }
+  80% {
+    transform: translate(3px, -3px) rotate(-1deg);
+  }
+  90% {
+    transform: translate(-2px, 1px) rotate(1deg);
+  }
+  100% {
+    transform: translate(2px, -1px) rotate(0deg);
+  }
+}
+/***************************************Chefs Section***************************************/
+div.Chefs-Section {
+  background-color: var(--Section-Background-Color-2);
+  overflow: hidden; /* To avoid margin collapse issue */
+}
+
+div.Chefs-Section div.Chefs-Section-Header {
+  /* background-color: chartreuse; */
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+div.Chefs-Section div.Chefs-Section-Header p {
+  font-family: "Amatic SC";
+  font-size: 50px;
+  font-weight: 400;
+  color: var(--Section-Header-Paragraph-Color);
+}
+
+div.Chefs-Section div.Chefs-Section-Header p span {
+  color: var(--Main-Color);
+}
+
+div.Chefs-Section div.Chefs-Section-Content {
+  /* background-color: orange; */
+  width: 100%;
+  padding-block: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+div.Chefs-Section div.Chefs-Section-Content div.Chefs-Section-Content-Card {
+  /* background-color: blue; */
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.5s transform;
+}
+
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card:hover {
+  transform: scale(1.05);
+}
+
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card
+  div.Inner {
+  /* background-color: red; */
+  width: 100%;
+  overflow-y: hidden;
+  border-radius: inherit;
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card
+  div.Inner
+  div.Card-Img {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card
+  div.Inner
+  div.Card-Img::before {
+  content: "";
+  width: 100%;
+  height: 61px;
+  background-image: url(../images/team-shape.svg);
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+}
+
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card
+  div.Inner
+  div.Card-Img
+  img {
+  width: 100%;
+  display: block;
+}
+
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card
+  div.Inner
+  div.Card-Img
+  div.Social-Media-Overlay {
+  background-color: rgba(211, 200, 191, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  top: 8%;
+  right: -20%;
+  transition: 0.3s right 0.5s;
+}
+
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card:hover
+  div.Inner
+  div.Card-Img
+  div.Social-Media-Overlay {
+  right: 3%;
+}
+
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card
+  div.Inner
+  div.Card-Img
+  div.Social-Media-Overlay
+  ul
+  li
+  a {
+  display: block;
+  width: 100%;
+  padding: 10px 5px;
+}
+
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card
+  div.Inner
+  div.Card-Img
+  div.Social-Media-Overlay
+  ul
+  li
+  a
+  i {
+  color: RGBA(55, 55, 63, 0.5);
+  font-size: 18px;
+  transition: 0.5s color;
+}
+
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card
+  div.Inner
+  div.Card-Img
+  div.Social-Media-Overlay
+  ul
+  li
+  a
+  i:hover {
+  color: rgb(71, 70, 77);
+}
+
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card
+  div.Inner
+  div.Card-Caption {
+  width: 100%;
+  background-color: var(--Chefs-Section-Card-Caption-Background-Color);
+  padding: 10px 25px 25px;
+}
+
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card
+  div.Inner
+  div.Card-Caption
+  h3 {
+  color: var(--Chefs-Section-Card-Caption-Heading-Color);
+}
+
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card
+  div.Inner
+  div.Card-Caption
+  span {
+  margin-block: 5px 10px;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--Span-Color);
+  display: inline-block;
+}
+div.Chefs-Section
+  div.Chefs-Section-Content
+  div.Chefs-Section-Content-Card
+  div.Inner
+  div.Card-Caption
+  p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--Paragraph-Color);
+  font-style: italic;
+}
+/***************************************Gallery Section***************************************/
+div.Gallery-Section {
+  background-color: var(--Section-Background-Color-1);
+  overflow: hidden; /* To avoid margin collapse issue */
+}
+
+div.Gallery-Section div.Gallery-Section-Header {
+  /* background-color: chartreuse; */
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+div.Gallery-Section div.Gallery-Section-Header p {
+  font-family: "Amatic SC";
+  font-size: 50px;
+  font-weight: 400;
+  color: var(--Section-Header-Paragraph-Color);
+}
+
+div.Gallery-Section div.Gallery-Section-Header p span {
+  color: var(--Main-Color);
+}
+
+div.Gallery-Section div.Gallery-Section-Content {
+  /* background-color: aqua; */
+  height: auto;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+  align-content: center;
+}
+
+div.Gallery-Section div.Gallery-Section-Content div.Gallery-Section-Picture {
+  /* background-color: gold; */
+  width: 100%;
+  border: 4px solid white;
+  position: relative;
+  overflow: hidden;
+}
+
+div.Gallery-Section div.Gallery-Section-Content div.Meal-1 {
+  order: 0;
+}
+
+div.Gallery-Section div.Gallery-Section-Content div.Meal-2 {
+  order: 4;
+}
+
+div.Gallery-Section div.Gallery-Section-Content div.Meal-3 {
+  order: 0;
+}
+
+div.Gallery-Section div.Gallery-Section-Content div.Meal-4 {
+  order: 0;
+}
+
+div.Gallery-Section div.Gallery-Section-Content div.Meal-5 {
+  order: 5;
+}
+
+div.Gallery-Section div.Gallery-Section-Content div.Meal-6 {
+  order: 6;
+}
+
+div.Gallery-Section div.Gallery-Section-Content div.Meal-7 {
+  order: 0;
+}
+
+div.Gallery-Section
+  div.Gallery-Section-Content
+  div.Gallery-Section-Picture
+  img {
+  width: 100%;
+  display: block;
+  transition: 0.5s transform;
+}
+
+div.Gallery-Section
+  div.Gallery-Section-Content
+  div.Gallery-Section-Picture:hover
+  img {
+  transform: scale(1.08);
+}
+
+div.Gallery-Section
+  div.Gallery-Section-Content
+  div.Gallery-Section-Picture
+  div.Overlay-Layer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  top: 100%;
+  transition: 0.5s top;
+}
+
+div.Gallery-Section
+  div.Gallery-Section-Content
+  div.Gallery-Section-Picture:hover
+  div.Overlay-Layer {
+  top: 0;
+}
+
+div.Gallery-Section
+  div.Gallery-Section-Content
+  div.Gallery-Section-Picture
+  div.Overlay-Layer
+  h3 {
+  color: white;
+}
+
+div.Gallery-Section
+  div.Gallery-Section-Content
+  div.Gallery-Section-Picture
+  div.Overlay-Layer
+  p {
+  color: rgb(221, 221, 221);
+  text-align: center;
+}
+/***************************************Contact Section***************************************/
+div.Contact-Section {
+  background-color: var(--Section-Background-Color-2);
+  overflow: hidden; /* To avoid margin collapse issue */
+}
+
+div.Contact-Section div.Contact-Section-Header {
+  /* background-color: chartreuse; */
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+div.Contact-Section div.Contact-Section-Header p {
+  font-family: "Amatic SC";
+  font-size: 50px;
+  font-weight: 400;
+  color: var(--Section-Header-Paragraph-Color);
+}
+
+div.Contact-Section div.Contact-Section-Header p span {
+  color: var(--Main-Color);
+}
+
+div.Contact-Section div.Contact-Section-Content div.Contact-List-Info {
+  margin-block: 25px;
+}
+
+div.Contact-Section div.Contact-Section-Content div.Contact-List-Info ul {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 15px;
+}
+
+div.Contact-Section div.Contact-Section-Content div.Contact-List-Info ul li {
+  width: 100%;
+  padding: 25px;
+  background-color: var(--Contact-Section-Contact-Info-List-Background-Color);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+div.Contact-Section
+  div.Contact-Section-Content
+  div.Contact-List-Info
+  ul
+  li
+  div.Content-Item-Icon {
+  background-color: var(--Main-Color);
+  min-width: 50px;
+  min-height: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+div.Contact-Section
+  div.Contact-Section-Content
+  div.Contact-List-Info
+  ul
+  li
+  div.Content-Item-Icon
+  i {
+  color: var(--Contact-Section-Contact-Info-List-Icon-Color);
+  font-size: 18px;
+}
+
+div.Contact-Section
+  div.Contact-Section-Content
+  div.Contact-List-Info
+  ul
+  li
+  div.Content-Item-Caption
+  h3 {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: RGB(125, 125, 125);
+}
+
+div.Contact-Section
+  div.Contact-Section-Content
+  div.Contact-List-Info
+  ul
+  li
+  div.Content-Item-Caption
+  p {
+  color: var(--Contact-Section-Contact-Info-List-data-Color);
+}
+
+div.Contact-Section
+  div.Contact-Section-Content
+  div.Contact-List-Info
+  ul
+  li
+  div.Content-Item-Caption
+  p
+  span {
+  font-weight: bold;
+}
+
+div.Contact-Section
+  div.Contact-Section-Content
+  div.Contact-List-Info
+  ul
+  li
+  div.Content-Item-Caption
+  a {
+  color: var(--Contact-Section-Contact-Info-List-data-Color);
+}
+
+div.Contact-Section div.Contact-Section-Content div.Contact-Form {
+  background-color: var(--Contact-Section-Contact-Form-Background-Color);
+  box-shadow: 0px 0px 14px 0px #0000001b;
+  padding: 20px;
+}
+
+div.Contact-Section div.Contact-Section-Content div.Contact-Form form {
+  display: flex;
+  flex-flow: wrap row;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+div.Contact-Section
+  div.Contact-Section-Content
+  div.Contact-Form
+  form
+  *:not(button) {
+  width: 100%;
+  padding: 15px;
+  line-height: 1.5;
+  border: solid 2px rgb(232, 227, 227);
+  transition: 0.5s border-color;
+}
+
+div.Contact-Section div.Contact-Section-Content div.Contact-Form form textarea {
+  min-height: 116px;
+  resize: vertical;
+}
+
+div.Contact-Section
+  div.Contact-Section-Content
+  div.Contact-Form
+  form
+  *:not(button):focus {
+  outline: none;
+  border-color: var(--Main-Color);
+}
+
+div.Contact-Section div.Contact-Section-Content div.Contact-Form form button {
+  margin-top: 25px;
+  padding: 12px 40px;
+  background-color: var(--Main-Color);
+  border: solid 2px var(--Main-Color);
+  color: var(--Btn-Anchor-Val-Color);
+  border-radius: 30px;
+  transition: 0.5s background-color, 0.5s border-color;
+}
+
+div.Contact-Section
+  div.Contact-Section-Content
+  div.Contact-Form
+  form
+  button:hover {
+  background-color: var(--Btn-Background-Hover-Color);
+  border-color: var(--Btn-Background-Hover-Color);
+}
+/***************************************Footer Section***************************************/
+div.Footer-Section {
+  background-image: linear-gradient(
+      rgba(16, 14, 15, 0.8),
+      rgba(16, 14, 15, 0.8)
+    ),
+    url(../images/textured-metal-background.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+div.Footer-Section div.Footer-Wrapper {
+  color: white;
+  display: flex;
+  flex-flow: wrap row;
+  align-items: center;
+  gap: 20px;
+}
+
+div.Footer-Section div.Footer-Wrapper div.About {
+  /* background-color: blueviolet; */
+  width: 100%;
+}
+
+div.Footer-Section div.Footer-Wrapper div.About div.About-Header {
+  /* background-color: brown; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+div.Footer-Section div.Footer-Wrapper div.About div.About-Header div.Logo {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+div.Footer-Section div.Footer-Wrapper div.About div.Logo img {
+  width: 100%;
+  display: block;
+}
+
+div.Footer-Section div.Footer-Wrapper div.About div.About-Header span {
+  font-family: "Open Sans";
+  font-size: 30px;
+  font-weight: 700;
+}
+
+div.Footer-Section div.Footer-Wrapper div.About div.About-Header span::after {
+  content: ".";
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--Main-Color);
+  font-family: "Open Sans";
+}
+
+div.Footer-Section div.Footer-Wrapper div.About p {
+  margin-block: 10px;
+}
+
+div.Footer-Section div.Footer-Wrapper div.About div.Social-Media-Links {
+  /* background-color: teal; */
+}
+
+div.Footer-Section div.Footer-Wrapper div.About div.Social-Media-Links h3 {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgb(92, 92, 92);
+}
+
+div.Footer-Section div.Footer-Wrapper div.About div.Social-Media-Links ul {
+  /* background-color: chocolate; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+div.Footer-Section div.Footer-Wrapper div.About div.Social-Media-Links ul li a {
+  color: white;
+  font-size: 24px;
+}
+
+div.Footer-Section div.Footer-Wrapper div.Subscription {
+  /* background-color: crimson; */
+  width: 100%;
+}
+div.Footer-Section div.Footer-Wrapper div.Subscription p {
+  margin-block: 10px;
+}
+
+div.Footer-Section div.Footer-Wrapper div.Subscription div.Subscription-Box {
+  /* background-color: darkorange; */
+  margin-block: 20px;
+}
+
+div.Footer-Section
+  div.Footer-Wrapper
+  div.Subscription
+  div.Subscription-Box
+  form {
+  display: flex;
+  flex-flow: wrap row;
+  gap: 5px;
+}
+
+div.Footer-Section
+  div.Footer-Wrapper
+  div.Subscription
+  div.Subscription-Box
+  form
+  input {
+  padding: 10px;
+  border: 2px solid rgb(232, 227, 227);
+  border-radius: 3px;
+  flex-grow: 1;
+  outline: none;
+}
+
+div.Footer-Section
+  div.Footer-Wrapper
+  div.Subscription
+  div.Subscription-Box
+  form
+  button {
+  color: var(--Btn-Anchor-Val-Color);
+  padding: 10px;
+  background-color: var(--Main-Color);
+  border: solid 2px var(--Main-Color);
+  transition: 0.5s background-color, 0.5s border-color;
+}
+
+div.Footer-Section
+  div.Footer-Wrapper
+  div.Subscription
+  div.Subscription-Box
+  form
+  button:hover {
+  background-color: var(--Btn-Background-Hover-Color);
+  border-color: var(--Btn-Background-Hover-Color);
+}
+
+div.Footer-Section div.Footer-Wrapper div.Subscription div.Quick-Links {
+  /* background-color: aqua; */
+}
+
+div.Footer-Section div.Footer-Wrapper div.Subscription div.Quick-Links ul {
+  margin-top: 10px;
+  display: flex;
+  flex-flow: wrap row;
+  column-gap: 10px;
+}
+
+div.Footer-Section div.Footer-Wrapper div.Subscription div.Quick-Links ul li {
+  flex-basis: calc(50% - 10px);
+  padding: 5px;
+  transition: 0.3s transform, 0.3s background-color;
+}
+
+div.Footer-Section div.Footer-Wrapper div.Subscription div.Quick-Links ul li a {
+  color: white;
+}
+
+div.Footer-Section
+  div.Footer-Wrapper
+  div.Subscription
+  div.Quick-Links
+  ul
+  li
+  a::before {
+  content: "\f105";
+  margin-right: 5px;
+  font-family: FontAwesome;
+}
+
+div.Footer-Section
+  div.Footer-Wrapper
+  div.Subscription
+  div.Quick-Links
+  ul
+  li:hover {
+  background-color: rgb(32, 32, 32);
+  transform: translateX(10px);
+}
+
+div.Footer-Section div.Footer-Wrapper div.Get-In-Touch {
+  /* background-color: gold; */
+  width: 100%;
+}
+
+div.Footer-Section div.Footer-Wrapper div.Get-In-Touch h3 {
+  margin-bottom: 10px;
+}
+
+div.Footer-Section div.Footer-Wrapper div.Get-In-Touch ul {
+  /* background-color: silver; */
+  width: 100%;
+}
+
+div.Footer-Section div.Footer-Wrapper div.Get-In-Touch ul li {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 1.5;
+  column-gap: 8px;
+}
+
+div.Footer-Section div.Footer-Wrapper div.Get-In-Touch ul li i {
+  color: var(--Main-Color);
+  font-size: 22px;
+  font-weight: 900;
+  display: flex;
+  min-height: 40px;
+  min-width: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+div.Footer-Section div.Footer-Wrapper div.Get-In-Touch ul li a {
+  color: white;
+}
+
+/***************************************Responsive Design Styles Based on Bootstrap Breakpoints***************************************/
+/* Extra Small Screens */
+@media screen and (max-width: 576px) {
+  /* Container */
+  .Container {
+    padding-inline: 15px;
+  }
+}
+/* ---------------------------------------------------------------- */
+/* Small Screens */
+@media screen and (min-width: 576px) {
+}
+/* ---------------------------------------------------------------- */
+/* Medium Screens */
+@media screen and (min-width: 768px) {
+  /* Container */
+  .Container {
+    max-width: 720px;
+  }
+  /* Chefs Section */
+  div.Chefs-Section div.Chefs-Section-Content div.Chefs-Section-Content-Card {
+    padding-right: 30px;
+  }
+  /* Gallery Section */
+  div.Gallery-Section div.Gallery-Section-Content {
+    height: 1405px;
+  }
+  div.Gallery-Section div.Gallery-Section-Content div.Gallery-Section-Picture {
+    width: calc(calc(100% - 20px) / 2);
+  }
+  /* Contact Section */
+  div.Contact-Section div.Contact-Section-Content div.Contact-List-Info ul li {
+    width: calc(calc(100% - 15px) / 2);
+  }
+  /* Footer Section */
+  div.Footer-Section div.Footer-Wrapper div.About {
+    width: calc((100% - 20px) / 2);
+  }
+  div.Footer-Section div.Footer-Wrapper div.Subscription {
+    order: 3;
+  }
+  div.Footer-Section div.Footer-Wrapper div.Get-In-Touch {
+    width: calc((100% - 20px) / 2);
+    align-self: flex-start;
+  }
+}
+/* ---------------------------------------------------------------- */
+/* Large Screens */
+@media screen and (min-width: 992px) {
+  /* Container */
+  .Container {
+    max-width: 960px;
+  }
+  /* Home Section */
+  div.Home-Section div.Home-Section-Wrapper {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+  div.Home-Section div.Home-Section-Wrapper div.Home-Section-Content {
+    width: 41%;
+    display: block;
+  }
+  div.Home-Section
+    div.Home-Section-Wrapper
+    div.Home-Section-Content
+    div.Home-Section-Btns
+    a:first-child {
+    border-top-left-radius: 0px;
+  }
+  div.Home-Section div.Home-Section-Wrapper div.Home-Section-Img {
+    width: 40%;
+  }
+  /* Gallery Section */
+  div.Gallery-Section div.Gallery-Section-Content {
+    height: 845px;
+  }
+  div.Gallery-Section div.Gallery-Section-Content div.Gallery-Section-Picture {
+    width: calc(calc(100% - 20px) / 3);
+  }
+
+  div.Gallery-Section div.Gallery-Section-Content div.Meal-1 {
+    order: 0;
+  }
+
+  div.Gallery-Section div.Gallery-Section-Content div.Meal-2 {
+    order: 2;
+  }
+
+  div.Gallery-Section div.Gallery-Section-Content div.Meal-3 {
+    order: 4;
+  }
+
+  div.Gallery-Section div.Gallery-Section-Content div.Meal-4 {
+    order: 1;
+  }
+
+  div.Gallery-Section div.Gallery-Section-Content div.Meal-5 {
+    order: 5;
+  }
+
+  div.Gallery-Section div.Gallery-Section-Content div.Meal-6 {
+    order: 6;
+  }
+
+  div.Gallery-Section div.Gallery-Section-Content div.Meal-7 {
+    order: 3;
+  }
+  /* Contact Section */
+  div.Contact-Section
+    div.Contact-Section-Content
+    div.Contact-Form
+    form
+    input#YourName,
+  div.Contact-Section
+    div.Contact-Section-Content
+    div.Contact-Form
+    form
+    input#YourEmail {
+    width: calc(calc(100% - 15px) / 2);
+  }
+}
+/* ---------------------------------------------------------------- */
+/* Extra Large Screens */
+@media screen and (min-width: 1200px) {
+  /* Container */
+  .Container {
+    max-width: 1140px;
+  }
+  /*Navigation Bar */
+  div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links {
+    position: relative;
+    transform: translateX(0%);
+    border-left: 0;
+  }
+  div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links ul {
+    flex-direction: row;
+  }
+  div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links ul li:first-child {
+    display: none;
+  }
+  div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Links ul li a {
+    width: 100%;
+    padding: 5px 15px;
+  }
+  div.Nav-Bar div.Nav-Bar-Wrapper div.Nav-Bar-Right-Wrapper {
+    column-gap: 0px;
+  }
+  div.Nav-Bar
+    div.Nav-Bar-Wrapper
+    div.Nav-Bar-Right-Wrapper
+    div.Nav-Bar-Links-Triple-Bar-Icon
+    i {
+    display: none;
+  }
+  /* Gallery Section */
+  div.Gallery-Section div.Gallery-Section-Content {
+    height: 1024px;
+  }
+  /* Footer Section */
+  div.Footer-Section div.Footer-Wrapper div.About {
+    width: calc((100% - 20px) / 4);
+    align-self: flex-start;
+  }
+  div.Footer-Section div.Footer-Wrapper div.Subscription {
+    order: 1;
+    width: calc((100% - 20px) / 4);
+    flex-grow: 1;
+  }
+  div.Footer-Section div.Footer-Wrapper div.Get-In-Touch {
+    order: 2;
+    width: calc((100% - 20px) / 4);
+  }
+}
+/* ---------------------------------------------------------------- */
+/* Double extra Large Screens */
+@media screen and (min-width: 1400px) {
+}
