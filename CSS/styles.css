@@ -698,7 +698,7 @@ div.Chefs-Section
   div.Card-Img
   img {
   width: 100%;
-  display: block;
+  /* display: block; */
 }
 
 div.Chefs-Section
