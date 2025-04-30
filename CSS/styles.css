@@ -420,6 +420,7 @@ div.Home-Section div.Home-Section-Wrapper {
   align-content: center;
   text-align: center;
   gap: 50px;
+  min-height: 100vh;
 }
 div.Home-Section div.Home-Section-Wrapper div.Home-Section-Content {
   /* background-color: blue; */
